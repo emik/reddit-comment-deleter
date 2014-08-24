@@ -1,0 +1,13 @@
+{
+  "name": "reddit-comment-deleter",
+  "version": "0.1.0",
+  "description": "Can be set up to routinely delete Reddit comments based on input dates",
+  "main": "./app.js",
+  "dependencies": {
+  	"bluebird": "2.3.1",
+  	"ini": "1.2.1",
+  	"request": "2.36.0"
+  },
+  "author": "Michael Awty",
+  "license": "BSD"
+}
