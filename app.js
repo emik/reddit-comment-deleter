@@ -1,5 +1,4 @@
 var request = require('request')
-  , cheerio = require('cheerio')
   , ini     = require('ini')
   , fs 	    = require('fs')
   , Promise = require("bluebird");
@@ -10,7 +9,6 @@ var deleteDistanceDays = config.deleteDistanceDays;
 var deleteBeforeDate = new Date(new Date().setDate(new Date().getDate()-deleteDistanceDays));
 var deleteBeforeTimestamp = Math.round(deleteBeforeDate.getTime() / 1000);
 
-console.log(deleteBeforeTimestamp);
 var commentsToDelete = [];
 var comments = [];
 

@@ -1,4 +1,2 @@
 reddit-comment-deleter
-======================
-
-allows routine reddit comment deletion using node.js
+======================Allows routine reddit comment deletion using node.js. Just fill in the basic config details and set your system to run `node app.js` within the root folder. app.js will gather all of your comments via the reddit API and delete them if they were posted more than X days ago (where X is the number of days you have defined in the config).
