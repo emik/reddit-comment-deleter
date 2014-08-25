@@ -169,7 +169,7 @@ reddit.login().then(function(){
 }).then(function(data){
 	commentsToDelete.forEach(function(comment){
 		comment.logDetails();
-		// comment.delete(reddit);
+		comment.delete(reddit);
 	});
 	console.log('end.');
 });
