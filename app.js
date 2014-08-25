@@ -118,7 +118,6 @@ function Comment(commentData){
 	}
 }
 Comment.prototype.logDetails = function(){
-	console.log('Details:');
 	console.log(this.name);
 	console.log(this.created);
 	console.log(this.body);
@@ -165,11 +164,14 @@ reddit.login().then(function(){
 			commentsToDelete.push(comment);
 		}
 	});
-	console.log('end commentsadded.');
+	console.log(commentsToDelete.length + 'comments added to delete list.');
 }).then(function(data){
 	commentsToDelete.forEach(function(comment){
+		console.log('Deleting: ');
 		comment.logDetails();
-		comment.delete(reddit);
+		comment.delete(reddit).then(function(){
+			console.log('Deleted.');
+		});
 	});
 	console.log('end.');
 });
